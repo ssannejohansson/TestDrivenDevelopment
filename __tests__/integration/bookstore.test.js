@@ -5,7 +5,7 @@ const {
   reserveStock,
   confirmPurchase,
   buyBook,
-} = require("./bookstore");
+} = require("../../src/bookstore");
 
 // --- Unit Tests ---
 
@@ -36,7 +36,10 @@ describe("reserveStock", () => {
 describe("confirmPurchase", () => {
   test("returns success object with the reservation code", () => {
     const result = confirmPurchase(1234, 89);
-    expect(result).toEqual({ success: true, code: 1234 });
+    expect(result).toEqual({
+      success: true,
+      code: 1234
+    });
   });
 
   test("throws when reservationCode is falsy (null)", () => {
@@ -55,6 +58,8 @@ describe("buyBook", () => {
     const result = buyBook("dune");
     // .toEqual is used here because result is an object, not a primitive.
     // .toBe would fail since two different objects are never === even with the same shape.
-    expect(result).toEqual(expect.objectContaining({ success: true }));
+    expect(result).toEqual(expect.objectContaining({
+      success: true
+    }));
   });
 });
