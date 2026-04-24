@@ -5,7 +5,7 @@ const {
   prepareOrder,
   processPayment,
   orderDrink,
-} = require("./coffeeShop");
+} = require("../../src/coffeeshop");
 
 // --- Unit Tests ---
 
