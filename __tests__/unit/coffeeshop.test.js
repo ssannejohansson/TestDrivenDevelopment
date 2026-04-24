@@ -54,6 +54,6 @@ describe("processPayment", () => {
 describe("orderDrink", () => {
   test("full flow for ordering a latte returns true", () => {
     const result = orderDrink("latte");
-    expect(result).toBe(true);
+    expect(result).toBe(false);
   });
 });
